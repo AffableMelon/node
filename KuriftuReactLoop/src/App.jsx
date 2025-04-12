@@ -2,6 +2,7 @@ import React from 'react';
 import {  Routes, Route, Link } from 'react-router-dom';
 import SignupPage from './pages/SignupPage';
 import LoginPage from './pages/LoginPage';
+import HomePage from './pages/HomePage';
 import DiscoveryPage from './pages/DiscoveryPage';
 import UserDashboard from './pages/UserDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -34,7 +35,7 @@ function App() {
         </div>
       </nav>
      <Routes>
-        <Route path="/" element={<div>Home Page </div>} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/discovery" element={<ProtectedRoute><DiscoveryPage /></ProtectedRoute>} />
